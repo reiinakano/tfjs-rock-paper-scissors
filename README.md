@@ -1,4 +1,4 @@
-This repository contains a demo written with TensorFlow.js that lets users play Rock Paper Scissors with their browser.
+This repository contains a demo written with TensorFlow.js that lets users play Rock Paper Scissors with their browser. It is based heavily on the code for Google's [Teachable Machine](https://teachablemachine.withgoogle.com/).
 
 You can run it immediately in your browser by going to https://reiinakano.github.io/tfjs-rock-paper-scissors/.
 
