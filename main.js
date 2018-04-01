@@ -161,13 +161,17 @@ class Main {
     }
     for (let i = 0; i < 3; i++) {
       this.gestureCpuImages[i].hidden = (i !== computerMove);
-      this.gestureYouImages[i].hidden = true;
     }
     this.startButton.disabled = false;
     this.hiddenCanvas.getContext('2d').drawImage(
       this.video, 0, 0, IMAGE_SIZE, IMAGE_SIZE);
     this.youImg.src = this.hiddenCanvas.toDataURL();
-    this.youImg.hidden = false;
+    this.youImg.onload = () => {
+      for (let i = 0; i < 3; i++) {
+        this.gestureYouImages[i].hidden = true;
+      }
+      this.youImg.hidden = false;
+    };
   }
 
   /**
