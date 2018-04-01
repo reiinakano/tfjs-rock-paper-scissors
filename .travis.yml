@@ -3,6 +3,8 @@ node_js:
   - "7"
 install:
   - "yarn prep"
+script:
+  - "yarn build"
 deploy:
   provider: pages
   skip_cleanup: true
