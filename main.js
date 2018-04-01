@@ -9,6 +9,12 @@ const IMAGE_SIZE = 227;
 // K value for KNN
 const TOPK = 10;
 
+const MOVES = [
+  'Rock',
+  'Paper',
+  'Scissors',
+]
+
 const trainButtonIds = [
   'train-rock-button',
   'train-paper-button',
@@ -64,8 +70,14 @@ class Main {
 
     for (let i = 0; i < NUM_CLASSES; i++) {
       let button = document.getElementById(trainButtonIds[i]);
-      button.addEventListener('mousedown', () => this.training = i);
-      button.addEventListener('mouseup', () => this.training = -1);
+      button.addEventListener('mousedown', () => {
+        this.training = i;
+        button.innerText = `Training ${MOVES[i]}...`;
+      });
+      button.addEventListener('mouseup', () => {
+        this.training = -1;
+        button.innerText = `Train ${MOVES[i]}`;
+      });
       this.infoTexts.push(document.getElementById(trainSpanIds[i]));
     }
 
