@@ -5,6 +5,7 @@ install:
   - "yarn prep"
 script:
   - "yarn build"
+  - "ls dist"
 deploy:
   provider: pages
   skip_cleanup: true
