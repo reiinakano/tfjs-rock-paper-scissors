@@ -13,7 +13,7 @@ const MOVES = [
   'Rock',
   'Paper',
   'Scissors',
-]
+];
 
 const trainButtonIds = [
   'train-rock-button',
